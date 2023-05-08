@@ -16,12 +16,12 @@ public class Main {
 
         try{
             System.out.println("Validador de contraseña compleja: (Al menos: 1 minuscula, 1 mayuscula, 1 numero, 1 caracter especial"+
-                    "(@#$%^&+=). Longitud minima de 8, maxima de 50. No se permiten espacios en blanco.");
+                    "(!@#&()–{}:;',?/*~$^+=<>). Longitud minima de 8, maxima de 50. No se permiten espacios en blanco.");
             System.out.print("Escribe: ");
             pw=sc.nextLine();
 
             Password pwVerify = new Password(pw);
-        }catch(InputMismatchException e){
+        }catch(InputMismatchException | InvalidPassWordException e){
             e.printStackTrace();
         }
     }
